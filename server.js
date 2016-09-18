@@ -3,7 +3,7 @@ var moment = require('moment');
 var app = express();
 
 app.get('/', function(req, res){
-    res.send("Psst... Put in a date/timestamp...");
+    res.end("Psst... Put in a date/timestamp...");
 });
 
 app.get('/:timestamp', function(req, res){
