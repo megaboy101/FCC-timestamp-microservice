@@ -18,7 +18,7 @@ app.get('/:timestamp', function(req, res){
    if (moment.unix(input).isValid()){
        
        json.unix = input;
-       json.natural = moment(input).format('MMMM D, YYYY');
+       json.natural = moment.unix(input).format('MMMM D, YYYY');
        res.send(json);
    }
    
