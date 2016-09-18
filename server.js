@@ -17,7 +17,7 @@ app.get('/:timestamp', function(req, res){
    // Check if input is a unix timestamp
    if (moment.unix(input).isValid()){
        
-       json.unix = input;
+       json.unix = Number(input);
        json.natural = moment.unix(input).format('MMMM D, YYYY');
        res.send(json);
    }
