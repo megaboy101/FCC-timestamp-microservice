@@ -19,7 +19,7 @@ app.get('/:timestamp', function(req, res){
        
        json.unix = input;
        json.natural = moment(input).format('MMMM D, YYYY');
-       app.send(json);
+       app.end(json);
    }
    
    // Check if input is a normal date
@@ -27,10 +27,10 @@ app.get('/:timestamp', function(req, res){
        var unixTime = (new Date(input).getTime())/1000;
        json.unix = unixTime;
        json.natural = input;
-       app.send(json);
+       app.end(json);
    }
    else {
-       app.send(json);
+       app.end(json);
    }
 });
 
